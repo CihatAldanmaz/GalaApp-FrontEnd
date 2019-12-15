@@ -29,7 +29,7 @@ export default class Dashboard extends Component {
   }
 
   getAllPlayers = () => {
-    axios.get("http://localhost:3000/players/").then(resp => {
+    axios.get("https://galaapp.herokuapp.com/players/").then(resp => {
       this.setState({
         players: resp.data
       });
@@ -37,7 +37,7 @@ export default class Dashboard extends Component {
   };
 
   getSquads = () => {
-    axios.get("http://localhost:3000/squads/").then(resp =>
+    axios.get("https://galaapp.herokuapp.com/squads/").then(resp =>
       this.setState({
         allsquads: resp.data
       })
@@ -46,7 +46,7 @@ export default class Dashboard extends Component {
 
   getUserSquads = async () => {
     axios
-      .get(`http://localhost:3000/users/${this.props.user_id}`, {
+      .get(`https://galaapp.herokuapp.com/users/${this.props.user_id}`, {
         headers: {
           Authorization: this.props.token
         }
@@ -84,7 +84,7 @@ export default class Dashboard extends Component {
       allsquads: allsquad
     });
     
-    axios.delete(`http://localhost:3000/squads/${squad.id}`)
+    axios.delete(`https://galaapp.herokuapp.com/squads/${squad.id}`)
     .then(resp => {console.log(resp.data)})
     
   }
@@ -93,7 +93,7 @@ export default class Dashboard extends Component {
     
     if (this.state.squadPlayers.length >= 11) {
       await axios
-        .post("http://localhost:3000/squads", {
+        .post("https://galaapp.herokuapp.com/squads", {
           name: this.state.squadName,
           user_id: this.props.user_id
         })
@@ -107,7 +107,7 @@ export default class Dashboard extends Component {
         axios({
           method: "post",
           responseType: "json",
-          url: `http://localhost:3000/playersquads`,
+          url: `https://galaapp.herokuapp.com/playersquads`,
           data: {
             player_id: player.id,
             squad_id: this.state.squad_id
