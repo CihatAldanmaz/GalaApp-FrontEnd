@@ -1,0 +1,11 @@
+.card2{
+    max-width: 50%;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.deneme {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}

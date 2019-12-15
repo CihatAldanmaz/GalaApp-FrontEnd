@@ -1,0 +1,44 @@
+
+
+.navi{
+    margin:0 auto;
+    display: flex;
+    background-color: #ebeef8;
+    width: 30%;
+    height: 55px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+li {
+    float: left;
+}
+
+li a {
+    text-align: center;
+    color: #c06c84;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    
+  }
+
+  li a:hover{
+    color: #f67280;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+  }
+  
